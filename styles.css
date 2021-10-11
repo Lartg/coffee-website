@@ -1,0 +1,180 @@
+body{
+  background-color: #121212;
+  font-family: Cambria;
+  color:cornsilk;
+}
+figcaption{
+  display: none;
+}
+figure{
+  border: #121212;
+  border-width: 8px;
+  border-style: solid;
+}
+figure img{
+  width: 100%;
+  height: 100%;
+}
+#about{
+  height: 100vh;
+  display: grid;
+  grid-gap: 0;
+  grid-template-rows: 1fr 2fr 2fr 2fr;
+  grid-template-areas: "h"
+                       "a"
+                       "b"
+                       "c";
+}
+#about h1{
+  grid-area: h;
+  font-size: 32px;
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+}
+#about div{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+#cost-card{
+  background-color: #310306;
+  grid-area: a;
+}
+#time-card{
+  background-color: #5d1916;
+  grid-area: b;
+}
+#ritual-card{
+  background-color: #7c0A02;
+  /* background-color: #59260b; */
+  grid-area: c;
+}
+#about div h3{
+  padding-left: 20px;
+  align-self:baseline;
+}
+#about div figure{
+  background-color: cornsilk;
+  height: 80%;
+  width: 300px;
+  align-self: center;
+  
+}
+#about div p{
+  width: 300px;
+  align-self: end;
+  padding-bottom: 1.5em;
+  padding-left: 24px;
+}
+#ingredients{
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 3fr;
+  grid-template-areas: "h h h"
+                       "a b c";
+}
+#ingredients header{
+  grid-area: h;
+  display: flex;
+  flex-direction: column;
+}
+#ingredients header h1{
+  margin-top: 3em;
+  font-size: 36px;
+  align-self: center;
+}
+#ingredients header h2{
+  padding-left: 3em;
+  font-size: 24px;
+  align-self: end;
+}
+#ingredients header h3{
+  font-size: 6px;
+  align-self: end;
+}
+
+#ingredients #whole-bean{
+  background-color: #310306;
+  grid-area: a;
+}
+#ingredients #whole-bean figure{
+  margin-top: 20%;
+  margin-bottom: 20%;
+}
+#ingredients #water{
+  background-color: #5d1916;
+  grid-area: b;
+}
+#ingredients #additives{
+  background-color: #7c0A02;
+  grid-area: c;
+}
+#ingredients #additives figure{
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+#ingredients div{
+  display: flex;
+  flex-direction: column;
+}
+#ingredients div h4{
+  margin-top: 48px;
+  font-size: 20px;
+  align-self: center;
+}
+#ingredients div p{
+  padding: 24px;
+}
+#method{
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "h h"
+                       "a b"
+                       "c c";
+  padding: 24px;
+}
+#method h1{
+  grid-area: h;
+  font-size: 36px;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#guidelines{
+  grid-area: a;
+  margin-top: -100px;
+  height: fit-content;
+}
+#descriptions{
+  grid-area: b;
+  margin-top: -100px;
+  height: fit-content;
+}
+#descriptions h3{
+  padding-left: 24px;
+}
+#descriptions p{
+  padding-left: 48px;
+}
+#method h2{
+  font-size: 28px;
+}
+#method h3{
+  font-size: 20px;
+}
+#recipe{
+  grid-area: c;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#recipe figure img{
+  height: 300px;
+  width: fit-content;
+}
