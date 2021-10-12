@@ -1,5 +1,3 @@
-//todo style and find images
-
 const drip = 
 `<div>
   <h2>Drip:</h2>
