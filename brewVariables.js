@@ -2,7 +2,7 @@ const grind =
 `
 <section id="grind">
       <h1>Grind</h1>
-      <h2>TLDR: Big grind = slow brew, small grind = fast brew</h2>
+      <h2>TLDR: Big grind = brew slow, small grind = brew fast</h2>
       <p>
         To make the transfer of material efficient, a high surface area to volume ratio is required.
         Think of a warehouse. 
@@ -18,6 +18,11 @@ const grind =
         When grind-size is decreased, more soluble material is extractted from the coffee.
         If your coffee is too bitter, try increasing your grind size.
         If your coffee is sour, try decreasing your grind size.
+      </p>
+      <p>
+        Now in order to accurately control your grind, I recommend purchasing a burr grinder.
+        They may be a lot more expensive than a blade grinder, and thats for a reason.
+        Blade grinders cut coffee into randomly sized bits, while burr grinders crush coffee into particles into a regular size.
       </p>
 </section>
 `
@@ -59,7 +64,7 @@ const time =
   And as you read in the TLDR, more time = more extraction.
 </p>
 </section>`
-const temp = 
+const temperature = 
 `
 <section id="temperature">
   <h1>Temperature</h1>
@@ -119,3 +124,11 @@ const ingredients =
 </div>
 </section>
 `
+
+export const brewVariables = {
+  grind: grind,
+  dose: dose,
+  time: time,
+  temperature: temperature,
+  ingredients: ingredients
+}

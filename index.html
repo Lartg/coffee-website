@@ -1,8 +1,5 @@
-<!-- coffee website
-how to brew good coffee at home
-source
-method - navs to more specific info
-
+<!-- TO-DO
+sourcing
 find photos -->
 
 <!DOCTYPE html>
@@ -12,8 +9,13 @@ find photos -->
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <section id="about">
-      <h1>Why brew at home?</h1>
+    <header>
+      <h1><button id="about-button">Why brew at Home?</button></h1>
+      <h1><button id="brew-var-button">Overview of Brewing Variables</button></h1>
+      <h1><button id=method-button>Methods</button></h1>
+    </header>
+    <div id="main-content">
+      <section id="about">
         <div id="cost-card">
           <h3>Cost</h3>
           <figure><img src="IMAGES/original.png"></figure>
@@ -52,7 +54,6 @@ find photos -->
         </div>
     </section>
     <section id="brewing-variables">
-      <h2>General guidelines for brew adjustment</h2>
       <h3>TLDR: Coffee can taste good because science</h3>
       <p>
         Brewing coffee or tea is the act of extracting material from plant cells,
@@ -81,27 +82,27 @@ find photos -->
         Click the buttons below to learn more about each variable.
       </h3>
       <div id="brew-var-button-container">
-        <button>Grind</button>
-        <button>Dose</button>
-        <button>Time</button>
-        <button>Temperature</button>
-        <button>Ingredients</button>
+        <button id="grind-button">Grind</button>
+        <button id="dose-button">Dose</button>
+        <button id="time-button">Time</button>
+        <button id="temperature-button">Temperature</button>
+        <button id="ingredients-button">Ingredients</button>
       </div>
-    </section>
-    <section id="method">
-      <h1>method</h1>
-      
-      <div id="descriptions">
-        <h2>what brewing method fits you?</h2>
-        <h3>Click a description</h3>
-          <button id="drip-desc">Fast, minimal effort, clear cup.</button>
-          <button id="fp-desc">Easily controlled, low-effort, fast, oily cup.</button>
-          <button id="cold-brew">Requires medium effort once a week to brew all the coffee you'll need</button>
-          <button id="pourover-desc">Requires some time, skill, and effort. Yields a cup perfect to your taste.</button>
-      </div>
-      <section id="recipe">
-      </section>
-    </section>
+      <div id="var-display"></div>
+</section>
+<section id="method">
+  <div id="descriptions">
+    <h2>what brewing method fits you?</h2>
+    <h3>Click a description</h3>
+      <button id="drip-desc">Fast, minimal effort, clear cup.</button>
+      <button id="fp-desc">Easily controlled, low-effort, fast, oily cup.</button>
+      <button id="cold-brew">Requires medium effort once a week to brew all the coffee you'll need</button>
+      <button id="pourover-desc">Requires some time, skill, and effort. Yields a cup perfect to your taste.</button>
+  </div>
+  <section id="recipe">
+  </section>
+</section>
+    </div>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script type="module" src="scripts.js"></script>
   </body>
