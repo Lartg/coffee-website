@@ -431,9 +431,26 @@ figure img{
 #descriptions button{
   background-color: #59260b;
   color: cornsilk;
+  padding: 5px;
   width: 25%;
+}
+#recipe div{
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#recipe li{
+  width: 100%;
+}
+#recipe figure{
+  width: fit-content;
+  height: fit-content;
 }
 #recipe img{
   width: 200px;
   height: fit-content;
+}
+#recipe p{
+  padding-left: 24px;
 }
