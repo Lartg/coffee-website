@@ -14,24 +14,36 @@ const methodButton = document.querySelector("#method-button")
 
 //change to impact style display none
 function changeMainContent(e){
-
   if(e.target && e.target == aboutButton){
+    //display only about
     document.querySelector("#about").style.display = "grid"
     document.querySelector("#brewing-variables").style.display = "none"
     document.querySelector("#method").style.display = "none"
-     //display onle about
+    //change button background-color to match content
+    aboutButton.style.backgroundColor = "#310306"
+    brewVarButton.style.backgroundColor = "#121212"
+    methodButton.style.backgroundColor = "#121212"
   }
   else if(e.target && e.target == brewVarButton){
+    //display only brew overview
     document.querySelector("#about").style.display = "none"
     document.querySelector("#brewing-variables").style.display = "grid"
     document.querySelector("#method").style.display = "none"
-    //display only brewvar
+    //change button background-color to match content
+    aboutButton.style.backgroundColor = "#121212"
+    brewVarButton.style.backgroundColor = "#5d1916"
+    methodButton.style.backgroundColor = "#121212"
   }
   else if(e.target && e.target == methodButton){
+     //display only method
     document.querySelector("#about").style.display = "none"
     document.querySelector("#brewing-variables").style.display = "none"
     document.querySelector("#method").style.display = "grid"
-    //display only method
+    //change button background-color to match content
+    aboutButton.style.backgroundColor = "#121212"
+    brewVarButton.style.backgroundColor = "#121212"
+    methodButton.style.backgroundColor = "#7c0A02"
+   
   }
 }
 
@@ -49,43 +61,9 @@ const ingredientsButton = document.querySelector("#ingredients-button")
 //output for brew variable
 const brewingVarDisplay = document.querySelector("#var-display")
 
-//-------------------------------------------------------------------------------------------
-
-//changing method content
-
-//targets for changing brew method
-const dripSelector = document.querySelector("#drip-desc")
-const fpSelector = document.querySelector("#fp-desc")
-const coldbrewSelector = document.querySelector("#cold-brew")
-const pouroverSelector = document.querySelector("#pourover-desc")
-
-//output selected brew method
-const recipe = document.querySelector("#recipe")
-
-//-------------------------------------------------------------------------------------------
-
-//event listener
-document.querySelector("body").addEventListener("click", change)
-
-//-------------------------------------------------------------------------------------------
-
-//event function
-//refactor
-function change(e){
-  changeMainContent(e)
-  if(e.target && e.target == dripSelector){
-    recipe.innerHTML = recipeDivs[0]
-  }
-  else if(e.target && e.target == fpSelector){
-    recipe.innerHTML = recipeDivs[1]
-  }
-  else if(e.target && e.target == coldbrewSelector){
-    recipe.innerHTML = recipeDivs[2]
-  }
-  else if(e.target && e.target == pouroverSelector){
-    recipe.innerHTML = recipeDivs[3]
-  }
-  else if(e.target && e.target == grindButton){
+//change brew var content
+function changeBrewVar(e){
+  if(e.target && e.target == grindButton){
     brewingVarDisplay.innerHTML =  brewVariables['grind']
   }
   else if(e.target && e.target == doseButton){
@@ -100,6 +78,48 @@ function change(e){
   else if(e.target && e.target == ingredientsButton){
     brewingVarDisplay.innerHTML =  brewVariables['ingredients']
   }
+}
+
+//-------------------------------------------------------------------------------------------
+
+//changing method content
+
+//targets for changing brew method
+const dripSelector = document.querySelector("#drip-desc")
+const fpSelector = document.querySelector("#fp-desc")
+const coldbrewSelector = document.querySelector("#cold-brew")
+const pouroverSelector = document.querySelector("#pourover-desc")
+
+//output selected brew method
+const recipe = document.querySelector("#recipe")
+
+//change brew method
+function changeBrewMethod(e){
+  if(e.target && e.target == dripSelector){
+    recipe.innerHTML = recipeDivs[0]
+  }
+  else if(e.target && e.target == fpSelector){
+    recipe.innerHTML = recipeDivs[1]
+  }
+  else if(e.target && e.target == coldbrewSelector){
+    recipe.innerHTML = recipeDivs[2]
+  }
+  else if(e.target && e.target == pouroverSelector){
+    recipe.innerHTML = recipeDivs[3]
+  }
+}
+//-------------------------------------------------------------------------------------------
+
+//event listener
+document.querySelector("body").addEventListener("click", change)
+
+//-------------------------------------------------------------------------------------------
+
+//event function
+function change(e){
+  changeMainContent(e)
+  changeBrewVar(e)
+  changeBrewMethod(e)
 }
 
 

@@ -82,7 +82,7 @@ const ingredients =
 `
 <section id="ingredients">
 <header>
-  <h1>ingredients</h1>
+  <h1>Ingredients</h1>
   <h2>TLDR: put good in, get good out</h2>
   <h3>Click buttons for more information</h3>
 </header>

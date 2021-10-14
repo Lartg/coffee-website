@@ -1,15 +1,41 @@
+/* background-color: #59260b; */
 body{
   background-color: #121212;
   font-family: Cambria;
   color:cornsilk;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#main-content{
+  max-width: 1000px;
 }
 header{
+  height: 5vh;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
-figcaption{
-  display: none;
+header h1{
+  width: 33.33%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+header h1 button{
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  background-color: #121212;
+  color: cornsilk;
+  border-top: none;
+  border-left: none;
+  border-radius: 10px;
+}
+#about-button{
+  background-color: #310306;
+  border-bottom: none;
 }
 figure{
   border: #121212;
@@ -23,7 +49,7 @@ figure img{
   margin: 0;
 }
 #about{
-  height: 100vh;
+  height: 90vh;
   display: grid;
   grid-gap: 0;
   grid-template-rows: 1fr 2fr 2fr 2fr;
@@ -42,21 +68,18 @@ figure img{
   align-items: center;
 }
 #about div{
+  background-color: #310306;
   display: flex;
   flex-direction: row;
   width: 100%;
 }
 #cost-card{
-  background-color: #310306;
   grid-area: a;
 }
 #time-card{
-  background-color: #5d1916;
   grid-area: b;
 }
 #flavor-card{
-  background-color: #7c0A02;
-  /* background-color: #59260b; */
   grid-area: c;
 }
 #about div h3{
@@ -80,8 +103,102 @@ figure img{
   padding-bottom: 1.5em;
   padding-left: 24px;
 }
+#brewing-variables{
+  background-color: #5d1916;
+  height: 95vh;
+  display: none;
+ 
+  grid-template-areas: "h"
+                       "ah"
+                       "a"
+                       "bh"
+                       "b"
+                       "c"
+                       "d";
+}
+
+#brewing-variables figure img{
+  width: 100%;
+  height: fit-content;
+}
+#brewing-variables h3{
+  grid-area: h;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#category-header{
+  grid-area: ah;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#brewing-variables #infuse-v-perc{
+  background-color: #121212;
+  grid-area: a;
+  display: flex;
+  flex-direction: row;
+}
+#brewing-variables #infuse-v-perc figure{
+  width: 25%;
+  height: fit-content;
+  align-self: center;
+}
+#brewing-variables #infuse-v-perc p{
+  width: 50%;
+  align-self: center;
+}
+#extract-header{
+  grid-area: bh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#brewing-variables #extract-overview{
+  background-color: #121212;
+  grid-area: b;
+  display: flex;
+  flex-direction: row;
+}
+#brewing-variables #extract-overview figure{
+  width: 50%;
+  height: fit-content;
+  align-self: center;
+}
+#extract-overview figure figcaption{
+  display: none;
+}
+#extract-p-container{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+#brewing-variables #var-menu{
+  grid-area: c;
+  background-color: #5d1916;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+#var-button-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+#var-button-container button{
+  width: 20%;
+  background-color: #310306;
+  color: cornsilk;
+  height: 32px;
+}
+#brewing-variables #var-display{
+  grid-area: d;
+  height: 90vh;
+}
+
 #ingredients{
-  height: 100vh;
+  height: 50vh;
   display: grid;
   grid-template-rows: 1fr 3fr;
   grid-template-areas: "h h h"
@@ -141,11 +258,13 @@ figure img{
   padding: 24px;
 }
 #method{
+  background-color: #7c0A02;
+  display: none;
   height: 100vh;
 }
 #method h1{
   font-size: 36px;
-  height: fit-content;
+  height: 95vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
