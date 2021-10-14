@@ -121,6 +121,3 @@ function change(e){
   changeBrewVar(e)
   changeBrewMethod(e)
 }
-
-
-

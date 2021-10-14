@@ -3,27 +3,39 @@ const grind =
 <section id="grind">
       <h1>Grind</h1>
       <h2>TLDR: Big grind = brew slow, small grind = brew fast</h2>
-      <p>
-        To make the transfer of material efficient, a high surface area to volume ratio is required.
-        Think of a warehouse. 
-        A big warehouse with lots of space, but with no garage doors is a bad warehouse.
-        A smaller warehouse with garage doors large enough for trucks to back up to is a good warehouse.
-        The same can be said for volume and surface-area.
-        To make the math simpler, let's use a cube. 
-        Volume = S^3
-        Surface-area = 6S^2
-        The closer S is to zero, the larger the ratio of surface-area : volume.
-        Therefore, if all other brewing variables are held constant, the changes to extraction are as follows:
-        When grind-size is increased, less soluble material is extracted from the coffee.
-        When grind-size is decreased, more soluble material is extractted from the coffee.
-        If your coffee is too bitter, try increasing your grind size.
-        If your coffee is sour, try decreasing your grind size.
-      </p>
-      <p>
-        Now in order to accurately control your grind, I recommend purchasing a burr grinder.
-        They may be a lot more expensive than a blade grinder, and thats for a reason.
-        Blade grinders cut coffee into randomly sized bits, while burr grinders crush coffee into particles into a regular size.
-      </p>
+      <div id="grind-p-container">
+        <p>
+          To make the transfer of material efficient, a high surface area to volume ratio is required.
+          Think of a warehouse. 
+          A big warehouse with lots of space, but with no garage doors is a bad warehouse.
+          A smaller warehouse with garage doors large enough for trucks to back up to is a good warehouse.
+          The same can be said for volume and surface-area.
+          To make the math simpler, let's use a cube. 
+          Volume = s^3
+          Surface-area = 6s^2
+          The closer S is to zero, the larger the ratio of surface-area : volume.
+          Therefore, if all other brewing variables are held constant, the changes to extraction are as follows:
+          When grind-size is increased, less soluble material is extracted from the coffee.
+          When grind-size is decreased, more soluble material is extracted from the coffee.
+          If your coffee is too bitter, try increasing your grind size.
+          If your coffee is sour, try decreasing your grind size.
+        </p>
+        <p>
+          Now in order to accurately control your grind, I recommend purchasing a burr grinder.
+          They may be a lot more expensive than a blade grinder, and thats for a reason.
+          Blade grinders cut coffee into randomly sized bits, while burr grinders crush coffee into particles into a regular size.
+        </p>
+      </div>
+      <div id="grind-fig-container">
+        <figure>
+          <img src="IMAGES/brewVariablesImages/blade grinder.jpeg">
+          <figcaption>blade grinder</figcaption>
+        </figure>
+        <figure>
+          <img src="IMAGES/brewVariablesImages/burr grinder.jpeg">
+          <figcaption>burr grinder</figcaption>
+        </figure>
+      </div>
 </section>
 `
 const dose = 
@@ -31,17 +43,21 @@ const dose =
 <section id="dose">
   <h1>Dose</h1>
   <h2>TLDR: more coffee -> stronger coffee</h2>
-  <p>
+  <p id="dose-consistent">
     Although dose can be used to affect flavor, I don't recommend it. 
     A typical 12oz cup of coffee is dosed with around 20g of coffee.
     Whenever you play with dose, you play with how much caffeine you are ingesting.
     Both overcaffienation, and undercaffinnation can be a bad time.
-    However, Increasing dose can increase resistance in a coffee filter, leading to more contact time with water,
+    I recommend a scale for dosing as volumetric measurements are less consistent.
+  </p>
+  <p id="dose-flavor">
+    However, Increasing dose will increase flow resistance in a coffee filter, leading to more contact time with water,
     leading to more materials being extracted. 
     Increasing dose can also lead to a thicker cup of coffee, although if this is a problem for you I would recommend trying a french press.
-    If your coffee is to thick, I recommend using a paper filter. There are many different filters on the market
-    that differ in thickness, and how much oils and such they let through without affecting your caffeine.
-    I advise you find a level of caffeine that you like,and stick with it. Change other variables for flavor adjustments.
+    If your coffee is too thick, I recommend using a paper filter. There are many different filters on the market
+    that differ in thickness, and how much oils and such they let through without affecting your caffeine. 
+    A Chemex filter yields a tea-like brew, whereas a Hario v60 has more body.
+    I advise you find a level of caffeine that you like, and stick with it. Change other variables for flavor adjustments.
   </p>
 </section>
 `
@@ -49,7 +65,13 @@ const time =
 `<section id="time">
 <h1>Time</h1>
 <h2>TLDR: More time = more extraction</h2>
-<p>
+<p id="time-p-a">
+  The more time grounds spend in contact with water, the more soluble material is extracted.
+  This means that using a timer for hand brews is key for consistency.
+  Most "coffee scales" have built in timers. 
+  But if you're using your kitchen scale, just start a stopwatch on your phone.
+</p>
+<p id="time-p-b">
   For percolation:
   In a drip machine, flow rate is usually fixed. This means that if you were to brew a pot
   instead of a single brew, there would be much more contact time with the water and ground coffee.
@@ -57,7 +79,7 @@ const time =
   Think of espresso. It takes 30s and the grounds are almost a powder. Small time, small grind.
   For drip: big time, big grind.
 </p>
-<p>
+<p id="time-p-c">
   For Infusion:
   Making a good infusion brew is all about marrying your grind-size and time.
   If you dont feel like changing your grind and purging your grinder, you can just play with the time that you steep your coffee.
@@ -84,10 +106,10 @@ const ingredients =
 <header>
   <h1>Ingredients</h1>
   <h2>TLDR: put good in, get good out</h2>
-  <h3>Click buttons for more information</h3>
+  <h3>activia please don't sue me</h3>
 </header>
 <div id="whole-bean">
-  <h4><button>Whole-bean vs ground</button></h4>
+  <h4>Whole-bean vs ground</h4>
   <figure><img src="IMAGES/wholebean v ground.png"></figure>
   <p>
     As soon as you grind coffee, you break apart the cells, exposing more surface area to air. &nbsp;
@@ -101,7 +123,7 @@ const ingredients =
   <p>Buy fair trade locally roasted coffee! For ethical and flavor reasons!</p>
 </div>
 <div id="water">
-  <h4><button>Water</button></h4>
+  <h4>Water</h4>
   <figure><img src="IMAGES/filter.jpeg"></figure>
   <p>
     Using filtered water ensures that you aren't contaminating your brew with minerals that can negatively impact flavor.&nbsp;
@@ -109,7 +131,7 @@ const ingredients =
   </p>
 </div>
 <div id="additives">
-  <h4><button>Additives</button></h4>
+  <h4>Additives</h4>
   <figure><img src="IMAGES/resize.webp"></figure>
   <p>
     Cream, sugar, etc.&nbsp;
