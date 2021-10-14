@@ -11,7 +11,6 @@ const drip =
   </ol>
 </div>`
 
-
 const frenchPress = 
 `<div>
   <h2>French Press:</h2>
