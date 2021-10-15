@@ -17,4 +17,4 @@ Just click the link here: [coffee-website](https://lartg.github.io/coffee-websit
 Brewing coffee is simple, brewing good coffee is complicated. This website provides help to those looking to start brewing good coffee at home.
 
 ## Author
-* **Arthur Lachlan**
+* **Lartg**
