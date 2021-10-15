@@ -20,7 +20,7 @@ function changeMainContent(e){
     document.querySelector("#brewing-variables").style.display = "none"
     document.querySelector("#method").style.display = "none"
     //change button background-color to match content
-    aboutButton.style.backgroundColor = "#310306"
+    aboutButton.style.backgroundColor = "#5d1916"
     brewVarButton.style.backgroundColor = "#121212"
     methodButton.style.backgroundColor = "#121212"
   }
@@ -42,7 +42,7 @@ function changeMainContent(e){
     //change button background-color to match content
     aboutButton.style.backgroundColor = "#121212"
     brewVarButton.style.backgroundColor = "#121212"
-    methodButton.style.backgroundColor = "#7c0A02"
+    methodButton.style.backgroundColor = "#5d1916"
    
   }
 }

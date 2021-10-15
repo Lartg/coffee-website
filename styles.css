@@ -1,10 +1,11 @@
 body{
   background-color: #121212;
-  font-family: Cambria;
+  font-family: Helvetica;
   color:cornsilk;
   display: flex;
   flex-direction: column;
   align-items: center;
+  line-height: 1.5;
 }
 #main-content{
   max-width: 1000px;
@@ -30,10 +31,11 @@ header h1 button{
   color: cornsilk;
   border-top: none;
   border-left: none;
-  border-radius: 10px;
+  border-bottom: none;
+  border-radius: 10px 10px 0 0;
 }
 #about-button{
-  background-color: #310306;
+  background-color: #5d1916;
   border-bottom: none;
 }
 figure{
@@ -78,7 +80,7 @@ figure img{
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: #310306;
+  background-color: #5d1916;
   font-size: 24px;
   padding: 12px;
 }
@@ -384,7 +386,7 @@ figure img{
 #method h1{
   margin-top: 0;
   margin-bottom: 0;
-  background-color: #7c0A02;
+  background-color: #5d1916;
   font-size: 32px;
   padding: 16px;
   display: flex;
